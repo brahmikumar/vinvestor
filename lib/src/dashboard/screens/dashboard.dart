@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:vinvestor/vui/ui_components/button.dart';
+import 'package:vinvestor/vui/ui_components/outlined_button.dart';
+import 'package:vinvestor/vui/ui_components/snackbar.dart';
+import 'package:vinvestor/vui/ui_components/text_button.dart';
 
 class Dashboard extends StatefulWidget {
   static const routeName = "/dashboard";
@@ -9,6 +13,11 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  redirect(){
+    print("redirect to live facilities 1");
+    Navigator.pushNamed(context, "/liveFacilities");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,6 +106,15 @@ class _DashboardState extends State<Dashboard> {
                     ),
                   ),
                 ),
+                const SizedBox(height: 20,),
+                VButton("Live Facilities", redirect ),
+                const SizedBox(height: 20,),
+                AppTextButton("Snack Bar", (){ ToastMessage.snackBarMessage(context, "Test Snack Bar"); }),
+                const SizedBox(height: 20,),
+                AppOutlinedButton("Error Message Snack Bar", (){ ToastMessage.errorSnackBar(context, "Something Went Wrong Please Try Again Later"); }),
+                const SizedBox(height: 20,),
+                VButton("Action Snack Bar", (){ ToastMessage.actionSnackBar(context, "Action", "Go to Main Page", redirect); }),
+
               ],
             ),
           ),

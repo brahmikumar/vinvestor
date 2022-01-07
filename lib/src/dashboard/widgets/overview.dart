@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vinvestor/vui/colors/colors.dart';
 
 class Overview extends StatelessWidget {
   const Overview({Key? key}) : super(key: key);
@@ -76,7 +77,7 @@ class Overview extends StatelessWidget {
                 children: [
                   Text("Weighted Average Interest Rate (YTD)", style: Theme.of(context).textTheme.subtitle1),
                   const SizedBox(height: 10,),
-                  Text("8.17% per month", style: Theme.of(context).textTheme.caption)
+                  const Text("8.17% per month", style: TextStyle(color: AppColors.colorRedPrimary))
                 ],
               ),
             ),

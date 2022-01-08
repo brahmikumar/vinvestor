@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vinvestor/vui/colors/colors.dart';
 import 'package:vinvestor/vui/ui_components/buttons/button.dart';
+import 'package:vinvestor/vui/ui_components/buttons/custom_button.dart';
 import 'package:vinvestor/vui/ui_components/buttons/full_width_button.dart';
 import 'package:vinvestor/vui/ui_components/buttons/outlined_button.dart';
 import 'package:vinvestor/vui/ui_components/snackbar.dart';
@@ -31,6 +33,9 @@ class _ButtonsDemoState extends State<ButtonsDemo> {
           AppOutlinedButton("Outlined Button", (){ }),
           const SizedBox(height: 20,),
           FullWidthButton("Full width Button", redirect ),
+          const SizedBox(height: 40,),
+
+          CustomButton("Custom Button", redirect, AppColors.colorRedPrimary, AppColors.colorSeqBlueOne ),
           const SizedBox(height: 40,),
         ],
       ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vinvestor/src/dashboard/widgets/buttons.dart';
+import 'package:vinvestor/src/dashboard/widgets/confirmMessages.dart';
+import 'package:vinvestor/src/dashboard/widgets/labels.dart';
 import 'package:vinvestor/src/dashboard/widgets/overview.dart';
 import 'package:vinvestor/src/dashboard/widgets/toastMessages.dart';
 
@@ -31,13 +33,16 @@ class _DashboardState extends State<Dashboard> {
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children:  const [
-                  Overview(),
-                  Divider(),
                   ButtonsDemo(),
                   Divider(),
+
                   ToastMessagesDemo(),
+                  Divider(),
 
+                  Labels(),
+                  Divider(),
 
+                  ConfirmMessagesDemo(),
                 ],
               ),
             ),

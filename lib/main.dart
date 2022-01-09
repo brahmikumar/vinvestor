@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vinvestor/src/dashboard/screens/dashboard.dart';
 import 'package:vinvestor/src/live_facilities/screens/live_facilities.dart';
+import 'package:vinvestor/src/overview/screens/overview.dart';
 import 'package:vinvestor/vui/app_theme/themedata.dart';
 import 'package:vinvestor/vui/temp/src/login/screens/login.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/' : (context) => const Login(),
         Dashboard.routeName : (context) => const Dashboard(),
         LiveFacilities.routeName : (context) => const LiveFacilities(),
+        Overview.routeName : (context) => const Overview(),
       },
     );
   }

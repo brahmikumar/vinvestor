@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vinvestor/vui/colors/colors.dart';
 import 'package:vinvestor/vui/ui_components/buttons.dart';
+import 'package:vinvestor/vui/ui_components/labels.dart';
 import 'package:vinvestor/vui/ui_components/snackbar.dart';
 
 class ToastMessagesDemo extends StatefulWidget {
@@ -17,8 +18,8 @@ class _ToastMessagesDemoState extends State<ToastMessagesDemo> {
     return Container(
       child: Column(
         children: [
+          headlineLabel(context, "Toast Messages"),
           const SizedBox(height: 20,),
-
           customButton(
             "Snack Bar",
             (){

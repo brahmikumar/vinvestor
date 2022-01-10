@@ -4,6 +4,7 @@ import 'package:vinvestor/vui/ui_components/buttons/button.dart';
 import 'package:vinvestor/vui/ui_components/buttons/custom_button.dart';
 import 'package:vinvestor/vui/ui_components/buttons/full_width_button.dart';
 import 'package:vinvestor/vui/ui_components/buttons/outlined_button.dart';
+import 'package:vinvestor/vui/ui_components/labels.dart';
 import 'package:vinvestor/vui/ui_components/snackbar.dart';
 import 'package:vinvestor/vui/ui_components/buttons/text_button.dart';
 
@@ -17,7 +18,6 @@ class ButtonsDemo extends StatefulWidget {
 class _ButtonsDemoState extends State<ButtonsDemo> {
 
   redirect(){
-    print("redirect to live facilities 1");
     Navigator.pushNamed(context, "/liveFacilities");
   }
 
@@ -26,11 +26,12 @@ class _ButtonsDemoState extends State<ButtonsDemo> {
     return Container(
       child: Column(
         children: [
+          headlineLabel(context, "Buttons"),
           const SizedBox(height: 20,),
           VButton("Live Facilities", redirect ),
           AppTextButton("Text Button", (){ ToastMessage.snackBarMessage(context, "Test Snack Bar"); }),
           const SizedBox(height: 20,),
-          AppOutlinedButton("Outlined Button", (){ }),
+          AppOutlinedButton("Outlined Button", (){ Navigator.pushNamed(context, "/overview"); }),
           const SizedBox(height: 20,),
           FullWidthButton("Full width Button", redirect ),
           const SizedBox(height: 40,),

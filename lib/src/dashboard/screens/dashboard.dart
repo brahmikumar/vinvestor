@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vinvestor/src/dashboard/widgets/alertDialogs.dart';
 import 'package:vinvestor/src/dashboard/widgets/buttons.dart';
 import 'package:vinvestor/src/dashboard/widgets/confirmMessages.dart';
 import 'package:vinvestor/src/dashboard/widgets/labels.dart';
@@ -40,6 +41,9 @@ class _DashboardState extends State<Dashboard> {
                   Divider(),
 
                   Labels(),
+                  Divider(),
+
+                  AlertDialogsDemo(),
                   Divider(),
 
                   ConfirmMessagesDemo(),

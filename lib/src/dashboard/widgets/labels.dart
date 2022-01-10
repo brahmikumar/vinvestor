@@ -9,6 +9,7 @@ class Labels extends StatelessWidget {
     return Container(
       child: Column(
         children: [
+          headlineLabel(context, "Text Labels"),
           const SizedBox(height: 20,),
           lowRiskLabel("Success"),
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vinvestor/src/utils/app_messages.dart';
-import 'package:vinvestor/vui/ui_components/alertDialog.dart';
 import 'package:vinvestor/vui/ui_components/buttons.dart';
 import 'package:vinvestor/vui/ui_components/confirm_model_sheet.dart';
+import 'package:vinvestor/vui/ui_components/labels.dart';
 import 'package:vinvestor/vui/ui_components/snackbar.dart';
 
 class ConfirmMessagesDemo extends StatelessWidget {
@@ -14,54 +14,8 @@ class ConfirmMessagesDemo extends StatelessWidget {
     return Container(
       child: Column(
         children: [
+          headlineLabel(context, "Confirm Model Sheet"),
           const SizedBox(height: 20,),
-          textButton(
-              "Submit",
-              () => showDialog<String>(
-                context: context,
-                builder: (BuildContext context) => AppAlertDialog(
-                    "Submit",
-                    "Once you submit you can't modify details",
-                    [
-                      {
-                        "title": "ok",
-                        "action": (){
-                          Navigator.pop(context);
-                          ToastMessage.snackBarMessage(context, Messages.logoutConfirmMsg);
-                        },
-                      },
-                    ]
-                ),
-              )
-          ),
-          const SizedBox(height: 20,),
-          textButton(
-              "Logout",
-              () => showDialog<String>(
-                context: context,
-                builder: (BuildContext context) => AppAlertDialog(
-                    "Logout",
-                    Messages.logoutConfirmMsg,
-                    [
-                      {
-                        "title": "ok",
-                        "action": (){
-                          Navigator.pop(context);
-                          ToastMessage.snackBarMessage(context, Messages.logoutSuccessMsg);
-                        },
-                      },
-                      {
-                        "title": "Cancel",
-                        "action": (){
-                          Navigator.pop(context);
-                        },
-                      }
-                    ]
-                ),
-              )
-          ),
-
-          const SizedBox(height: 40,),
           button("Logout", (){
             showModalBottomSheet<dynamic>(
                   isScrollControlled: true,
@@ -73,7 +27,7 @@ class ConfirmMessagesDemo extends StatelessWidget {
                       action: const ["Yes", "No"],
                       onConfirmChanged: (result) async {
                         if(result){
-                          ToastMessage.snackBarMessage(context, Messages.logoutConfirmMsg);
+                          ToastMessage.snackBarMessage(context, Messages.logoutSuccessMsg);
                         }
                       },
                     );
